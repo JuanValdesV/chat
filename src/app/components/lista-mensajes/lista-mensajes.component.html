@@ -1,0 +1,55 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Mensajes No Leidos</a>
+    <button class="btn btn-success" type="button"  (click)="irAlChat()" >
+      Ir al chat
+  </button>
+    <button class="btn btn-danger" type="button"  (click)="logOut()" >
+        Cerrar Sesión
+    </button>
+
+    
+    
+  </div>
+</nav>
+<br>
+<br>
+<h1>Mensajes No Leidos</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Emisor</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Mensajes No Leidos</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody *ngIf="miMensaje.length ===0">
+    <th scope="col">No hay mensajes por mostrar</th>
+  </tbody>
+  <tbody>
+    <tr *ngFor="let mensajes of miMensaje">
+      <td>{{mensajes.emisor}}</td>
+      <td>{{mensajes.correo}}</td>
+      <td>{{mensajes.estado}}</td>
+      <td>{{mensajes.count}}</td>
+      <td>
+        <input type="checkbox" id="btn-modal">
+        <label for="btn-modal" class="lbl-modal" (click)="verMensajeNL(mensajes.correo)">Ver</label>
+        <div class="modal" style="overflow: scroll;">
+          <div class="contenedor">
+          <label for="btn-modal" style="color:#5443d2 " (click)= "actualizarEMensaje(mensajes.correo)" >X</label>
+          <div class="col-md-8" *ngFor = "let mensaje of mensajeNV">
+            <div class="card-body">
+              <h3 class="card-title">Emisor: {{mensaje.mensajes_emisor}}</h3>
+              <p class="card-text"> Fecha: {{mensaje.mensajes_fecha_hora | date:'dd-MM-yyyy HH:mm:ss' }}</p>
+              <p class="card-text">Correo: {{mensaje.mensajes_correo}}</p>
+              <p class="card-text">Mensaje: {{mensaje.mensajes_texto}}</p>
+              <p class="card-text">Telefono: {{mensaje.Usuario_telefono}}</p>
+            </div>
+          </div>
+          </div>
+        </div>
+  </tbody>
+</table>

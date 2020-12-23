@@ -1,0 +1,15 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+      <h2 class="active">Iniciar Sesión</h2>
+
+      <div class="fadeIn first">
+          <img src="../../../assets/kisspng-computer-icons-message-online-chat-sms-chat-5abcf6bf5c4737.816898141522333375378.png" id="icon" alt="User Icon" style="height: 25%; width: 25%; object-fit: contain" />
+      </div>
+
+      <form>
+          <input type="text" id="correo" class="fadeIn second" name="correo" placeholder="CORREO" required="required" [(ngModel)]="correo" />
+          <input type="password" id="password" class="fadeIn third" name="password" placeholder="CONTRASEÑA" required="required" [(ngModel)]="password" />
+          <button type="submit" class="fadeIn fourth" (click)="ingresar()">Iniciar Sesión</button>
+      </form>
+  </div>
+</div>

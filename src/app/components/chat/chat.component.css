@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+.r {
+    right: 30px;
+    bottom: 0px;
+    min-width: 500px;
+    background: rgb(236, 234, 234);
+    border-radius: 15px;
+    margin-top: 100px;
+    
+}
+ 
+.r .headtext {
+    line-height: 60px;
+    color: rgb(255, 255, 255);
+    border-radius: 15px 15px 0 0;
+    padding: 0 20px;
+    font-weight: 500;
+    font-size: 20px;
+    background: #5887ef;
+}
+ 
+.r .chatbox {
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 150px;
+    margin-right: 80%;
+    
+}
+ 
+.chatbox .desc-text {
+    color: #515365;
+    text-align: center;
+    line-height: 25px;
+    font-size: 17px;
+    font-weight: 500;
+}
+ 
+.chat-box form {
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 25px;
+    border: 1px solid lightgrey;
+}
+ 
+.chatbox form .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+ 
+.chatbox form .field:last-child {
+    margin-bottom: 15px;
+}
+ 
+form .field input,
+form .field button,
+form .textarea textarea {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+ 
+form .field input:focus,
+form .textarea textarea:focus {
+    border-color: #5887ef;
+}
+ 
+form .field input::placeholder,
+form .textarea textarea::placeholder {
+    color: silver;
+    transition: all 0.3s ease;
+}
+ 
+form .field input:focus::placeholder,
+form .textarea textarea:focus::placeholder {
+    color: lightgrey;
+}
+ 
+.chatbox form .textarea {
+    height: 70px;
+    width: 100%;
+}
+ 
+.chatbox form .textarea textarea {
+    height: 100%;
+    border-radius: 50px;
+    resize: none;
+    padding: 15px 20px;
+    font-size: 16px;
+}
+ 
+.chatbox form .field button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    background: #5887ef;
+    transition: all 0.3s ease;
+}
+ 
+.chatbox form .field button:active {
+    transform: scale(0.97);
+}
+ 
+.btn-danger {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    background: #dd0808;
+    transition: all 0.3s ease;
+    height: 100%;
+    border-radius: 50px;
+    resize: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    margin-top: 35px;
+}
+ 
+.speech-bubble {
+    background: #6495ED;
+    /* el color de fondo */
+    color: #FFF;
+    /* el color del texto */
+    font-family: Arial, Sans-serif;
+    font-size: 12px;
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+    width: 200px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+ 
+.speech-bubble:after {
+    border: solid 10px transparent;
+    border-top-color: #6495ED;
+    /* igual al color de fondo */
+    border-bottom: 0;
+    bottom: -20px;
+    /* igual al borde + el padding-bottom de la definición anterior */
+    content: "";
+    display: block;
+    height: 0;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 0;
+}
+ 
+#chat-mensajes {
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+}
